@@ -1,13 +1,8 @@
-/*
- 	@license Copyright (c) 2011 Brian Cavalier
-	LICENSE: see the LICENSE.txt file. If file is missing, this file is subject
-	to the MIT License at: http://www.opensource.org/licenses/mit-license.php.
- */
-
+/* @license Copyright (c) 2011-2013 Brian Cavalier */
 /*
 	Class: PresentationModel
 */
-define(['require', 'when'], function(require, when) {
+define(['require', '../.'], function(require, when) {
 
 	var 
 		// Default number of slides to preload

@@ -1,18 +1,18 @@
+/* @license Copyright (c) 2011-2013 Brian Cavalier */
 (function(curl) {
 
-	// Configure curl and load components, theme css,
-	// and wait for DOM Ready.  Then create model, view,
-	// and controller, and start the presentation.
-	var config = {
-		baseUrl: '',
+	curl({
+		main: 'app/main',
 		paths: {
-			'themes': 'css/themes'
+			'themes': 'css/themes',
+			'markdown': 'app/hc/markdown'
 		},
-		packages: [
-			{ name: 'when', location: 'lib/when', main: 'when' }
-		]
-	};
-
-	curl(config, ['app/main']);
+		packages: {
+			curl: { location: 'bower_components/curl/src/curl' },
+			when: { location: 'bower_components/when', main: 'when' },
+			marked: { location: 'bower_components/marked', main: 'lib/marked' },
+			highlightjs: { location: 'bower_components/highlightjs', main: 'highlight.pack.js' }
+		}
+	});
 
 })(window.curl);
